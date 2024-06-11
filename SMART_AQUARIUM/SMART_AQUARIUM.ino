@@ -25,11 +25,11 @@ OneWire oneWire(oneWireBus);
 DallasTemperature sensors(&oneWire);
 
 // Set the LCD address
-const int lcdAddress = 0x27;  // Alamat I2C LCD 16x2
+const int lcdAddress = 0x27;  //  I2C LCD 16x2
 
 // Set the LCD dimensions
-const int lcdColumns = 16;  // Jumlah kolom pada LCD
-const int lcdRows = 2;      // Jumlah baris pada LCD
+const int lcdColumns = 16;  
+const int lcdRows = 2;      
 
 // Initialize the LCD
 LiquidCrystal_I2C lcd(lcdAddress, lcdColumns, lcdRows);
@@ -57,16 +57,16 @@ float PH7 = 0.211;
 
 
 // Replace with your network credentials
-const char* ssid = "smrtaqua";
-const char* password = "aquasmart123";
+const char* ssid = "YOUR SSID";
+const char* password = "YOUR PASSWORD";
 
 // Initialize Telegram BOT
-#define BOTtoken "5949544979:AAFtmHhJ8YYnSAqd8A3_sb6sIKfyOp5nKEE"  // your Bot Token (Get from Botfather)
+#define BOTtoken "YOUR BOT TOKEN"  // your Bot Token (Get from Botfather)
 
 // Use @myidbot to find out the chat ID of an individual or a group
 // Also note that you need to click "start" on a bot before it can
 // message you
-#define CHAT_ID "-1001937842178"
+#define CHAT_ID "YOUR ID CHAT"
 
 X509List cert(TELEGRAM_CERTIFICATE_ROOT);
 WiFiClientSecure client;
