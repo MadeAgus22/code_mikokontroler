@@ -16,12 +16,12 @@
 #define motorInterfaceType 1
 
 // Change the credentials below, so your ESP8266 connects to your router
-const char* ssid = "IoT";
-const char* password = "qwerty1234";
+const char* ssid = "YOUR_SSID";
+const char* password = "YOUR_PASSWORD";
 
 // Token dan Chat ID Telegram BOT
-#define BOTtoken "6999662252:AAF_sRNqOLQtgONZze8flKVgGOKX1exf0-c"  // your Bot Token (Get from Botfather)
-#define CHAT_ID "-4155576299"
+#define BOTtoken "YOUR_BOT_TOKEN"  // your Bot Token (Get from Botfather)
+#define CHAT_ID "YOUR_ID_CHAT"
 
 WiFiClientSecure client;
 UniversalTelegramBot bot(BOTtoken, client);
