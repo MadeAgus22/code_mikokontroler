@@ -36,13 +36,14 @@ Before running the code, make sure to replace the following placeholders with yo
   const char* password = "YOUR_PASSWORD";
 
 - **Telegram Bot Token and Chat ID**
-  
+  ```cpp
   #define BOTtoken "YOUR_BOT_TOKEN"
   #define CHAT_ID "YOUR_ID_CHAT"
   
 ## Code Overview
 
 - **Libraries and Definitions**
+  
  ```cpp
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
@@ -60,7 +61,8 @@ Before running the code, make sure to replace the following placeholders with yo
 #define stepPin 17
 #define motorInterfaceType 1
 
--**Global Variabels**
+- **Global Variabels**
+
  ```cpp
 bool previousLEDStatus = false;
 const long utcOffsetInSeconds = 28800;
@@ -70,7 +72,8 @@ LiquidCrystal_I2C lcd(0x27, 20, 4);
 String weekDays[7] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
 String months[12] = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
 
--**Setup Function**
+- **Setup Function**
+
  ```cpp
 void setup() {
   Serial.begin(115200);
@@ -130,7 +133,7 @@ void setup() {
   delay(15);
 }
 
--**Main Loop**
+- **Main Loop**
  ```cpp
 void loop() {
   timeClient.update();
