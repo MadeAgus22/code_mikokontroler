@@ -36,11 +36,13 @@ Before running the code, make sure to replace the following placeholders with yo
   const char* password = "YOUR_PASSWORD";
 
   - **Telegram Bot Token and Chat ID**
+  ```cpp
   #define BOTtoken "YOUR_BOT_TOKEN"
   #define CHAT_ID "YOUR_ID_CHAT"
   
 ## Code Overview
 - **Libraries and Definitions**
+ ```cpp
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
 #include <Wire.h>
@@ -58,6 +60,7 @@ Before running the code, make sure to replace the following placeholders with yo
 #define motorInterfaceType 1
 
 -**Global Variabels**
+ ```cpp
 bool previousLEDStatus = false;
 const long utcOffsetInSeconds = 28800;
 WiFiUDP ntpUDP;
@@ -67,6 +70,7 @@ String weekDays[7] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "
 String months[12] = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
 
 -**Setup Function**
+ ```cpp
 void setup() {
   Serial.begin(115200);
   lcd.init();
@@ -126,6 +130,7 @@ void setup() {
 }
 
 -**Main Loop**
+ ```cpp
 void loop() {
   timeClient.update();
   akses_waktu();
@@ -376,6 +381,7 @@ get_alarm(): Retrieves alarm settings from EEPROM.
 display_position(int digits): Displays the given digits with leading zero.
 
 -**Telegram Bot Handling**
+ ```cpp
 void handleNewMessages(int numNewMessages) {
   Serial.println("handleNewMessages");
 
