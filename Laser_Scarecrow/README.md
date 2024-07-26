@@ -43,39 +43,37 @@ Before running the code, make sure to replace the following placeholders with yo
 ## Code Overview
 
 - **Libraries and Definitions**
-  
- ```cpp
-#include <WiFi.h>
-#include <WiFiClientSecure.h>
-#include <Wire.h>
-#include <LiquidCrystal_I2C.h>
-#include <NTPClient.h>
-#include <WiFiUdp.h>
-#include <EEPROM.h>
-#include <UniversalTelegramBot.h>
-#include <ArduinoJson.h>
-#include <ESP32Servo.h>
-#include "AccelStepper.h"
+  ```cpp
+  #include <WiFi.h>
+  #include <WiFiClientSecure.h>
+  #include <Wire.h>
+  #include <LiquidCrystal_I2C.h>
+  #include <NTPClient.h>
+  #include <WiFiUdp.h>
+  #include <EEPROM.h>
+  #include <UniversalTelegramBot.h>
+  #include <ArduinoJson.h>
+  #include <ESP32Servo.h>
+  #include "AccelStepper.h"
 
-#define dirPin 16
-#define stepPin 17
-#define motorInterfaceType 1
+  #define dirPin 16
+  #define stepPin 17
+  #define motorInterfaceType 1
 
-- **Global Variabels**
+  // Global Variables
+  bool previousLEDStatus = false;
+  const long utcOffsetInSeconds = 28800;
+  WiFiUDP ntpUDP;
+  NTPClient timeClient(ntpUDP, "pool.ntp.org", utcOffsetInSeconds);
+  LiquidCrystal_I2C lcd(0x27, 20, 4);
+  String weekDays[7] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+  String months[12] = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", 
+  "December" };
 
- ```cpp
-bool previousLEDStatus = false;
-const long utcOffsetInSeconds = 28800;
-WiFiUDP ntpUDP;
-NTPClient timeClient(ntpUDP, "pool.ntp.org", utcOffsetInSeconds);
-LiquidCrystal_I2C lcd(0x27, 20, 4);
-String weekDays[7] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
-String months[12] = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
 
-- **Setup Function**
-
- ```cpp
-void setup() {
+- **Setup function**
+  ```cpp
+  void setup() {
   Serial.begin(115200);
   lcd.init();
   lcd.backlight();
@@ -130,12 +128,11 @@ void setup() {
   timeClient.begin();
   get_alarm();
   lcd.clear();
-  delay(15);
-}
+  delay(15); }
 
 - **Main Loop**
- ```cpp
-void loop() {
+  ```cpp
+  void loop() {
   timeClient.update();
   akses_waktu();
 
@@ -181,24 +178,23 @@ void loop() {
     tampil_lcd();
     timer();
     Telegram();
-  }
-}
+  } }
 
-**Functions**
+## Functions
 
-akses_waktu(): Updates and accesses current time.
-timer(): Controls device activation based on the timer.
-Telegram(): Handles incoming messages from Telegram.
-tampil_lcd(): Displays the current time and timer settings on the LCD.
-display_set_AL_time(): Allows setting of the ON timer.
-display_set_AL_time_off(): Allows setting of the OFF timer.
-set_alarm(): Saves alarm settings to EEPROM.
-get_alarm(): Retrieves alarm settings from EEPROM.
-display_position(int digits): Displays the given digits with leading zero.
+- `akses_waktu()`: Updates and accesses current time.
+- `timer()`: Controls device activation based on the timer.
+- `Telegram()`: Handles incoming messages from Telegram.
+- `tampil_lcd()`: Displays the current time and timer settings on the LCD.
+- `display_set_AL_time()`: Allows setting of the ON timer.
+- `display_set_AL_time_off()`: Allows setting of the OFF timer.
+- `set_alarm()`: Saves alarm settings to EEPROM.
+- `get_alarm()`: Retrieves alarm settings from EEPROM.
+- `display_position(int digits)`: Displays the given digits with leading zero.
 
--**Telegram Bot Handling**
- ```cpp
-void handleNewMessages(int numNewMessages) {
+- **Telegram Bot Handling**
+  ```cpp
+  void handleNewMessages(int numNewMessages) {
   Serial.println("handleNewMessages");
 
   for (int i = 0; i < numNewMessages; i++) {
@@ -220,7 +216,10 @@ void handleNewMessages(int numNewMessages) {
       bot.sendMessage(chat_id, welcome, "");
     }
     // Add handling for other commands here...
-  }
-}
+  } }
+
 
   
+
+
+
