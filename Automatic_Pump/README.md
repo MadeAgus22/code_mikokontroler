@@ -4,9 +4,9 @@ This project uses an ultrasonic sensor to measure distance and control a relay b
 
 ## Components
 
-- Ultrasonic sensor (e.g., HC-SR04)
+- Ultrasonic sensor HC-SR04
 - Relay module
-- Arduino (e.g., Arduino Uno)
+- Arduino Uno
 - Jumper wires
 
 ## Wiring
