@@ -220,7 +220,7 @@ Before running the code, make sure to replace the following placeholders with yo
 
 # Documentation
 
-![alt text](picture/Automatic pump/Artboard 1-100.jpg?raw=true)
+![alt text](https://github.com/MadeAgus22/code_mikokontroler/picture/Automatic pump/Artboard 1-100.jpg?raw=true)
   
 
 
