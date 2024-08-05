@@ -1,7 +1,8 @@
 # Laser Scarecrow Project
 
 This project uses an ESP32 to control a laser-based scarecrow system. The system integrates various components including servos, a stepper motor, a relay, and an LCD display. It can be controlled remotely via Telegram and allows for timer-based activation.
-
+# Schematic
+![alt_text](https://raw.githubusercontent.com/MadeAgus22/code_mikokontroler/3261d3ae06953b92106cb7032b184f3db9847d59/picture/laser%20scarecrow/SCH_Laser-based%20Bird%20Pest%20Repellent_1-P1_2024-06-20.png?raw=true)
 ## Components
 
 - **ESP32 DevKitC**
@@ -220,8 +221,7 @@ Before running the code, make sure to replace the following placeholders with yo
 
 # Documentation
 
-![alt text](https://github.com/MadeAgus22/code_mikokontroler/picture/Automatic pump/Artboard 1-100.jpg?raw=true)
-  
+![alt text](https://raw.githubusercontent.com/MadeAgus22/code_mikokontroler/3261d3ae06953b92106cb7032b184f3db9847d59/picture/laser%20scarecrow/alat.jpg?raw=true) ![alt_text](https://raw.githubusercontent.com/MadeAgus22/code_mikokontroler/3261d3ae06953b92106cb7032b184f3db9847d59/picture/laser%20scarecrow/alat2.jpg?raw=true) ![alt_text](https://raw.githubusercontent.com/MadeAgus22/code_mikokontroler/3261d3ae06953b92106cb7032b184f3db9847d59/picture/laser%20scarecrow/component.jpg?raw=true) ![alt_text](https://raw.githubusercontent.com/MadeAgus22/code_mikokontroler/3261d3ae06953b92106cb7032b184f3db9847d59/picture/laser%20scarecrow/telegram.jpg?raw=true)
 
 
 
