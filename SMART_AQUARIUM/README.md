@@ -1,7 +1,8 @@
 # Smart Aquarium
 
 The Smart Aquarium project uses an ESP8266 to monitor and control water quality and fish feeding. This system employs various sensors to measure water temperature, pH levels, and food availability, as well as a servo motor to control feeding. Additionally, the project includes a Telegram bot for user communication, providing information and receiving commands.
-
+## Schematic
+![alt_text](https://raw.githubusercontent.com/MadeAgus22/code_mikokontroler/3261d3ae06953b92106cb7032b184f3db9847d59/picture/Smart%20Aqua/SCH_Schematic%20Smart%20Aquarium_1-P1_2024-06-20.png?raw=true)
 ## Components
 
 - ESP8266
@@ -62,4 +63,5 @@ Once the code is uploaded and the device is connected to WiFi, you can use the f
 - **LCD Display**: Shows real-time status of the aquarium on an I2C 16x2 LCD display.
 - **Buzzer Alert**: Alerts when the food level is low.
 
-
+## Documentation
+![alt_text](https://raw.githubusercontent.com/MadeAgus22/code_mikokontroler/3261d3ae06953b92106cb7032b184f3db9847d59/picture/Smart%20Aqua/component1.jpg?raw=true) ![alt_text](https://raw.githubusercontent.com/MadeAgus22/code_mikokontroler/3261d3ae06953b92106cb7032b184f3db9847d59/picture/Smart%20Aqua/prototipe.jpg?raw=true) ![alt_text](https://raw.githubusercontent.com/MadeAgus22/code_mikokontroler/3261d3ae06953b92106cb7032b184f3db9847d59/picture/Smart%20Aqua/on%20telegram.jpg?raw=true)
