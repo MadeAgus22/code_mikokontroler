@@ -4,8 +4,8 @@
 #define TRIGGER_PIN  12
 #define ECHO_PIN     14
 
-const char* ssid = "IoT";
-const char* password = "qwerty1234";
+const char* ssid = "Your SSID";
+const char* password = "Your PASWORD";
 
 void setup() {
   Serial.begin(115200);
@@ -36,7 +36,7 @@ void loop() {
   if(WiFi.status() == WL_CONNECTED) {
     HTTPClient http;
 
-    http.begin("http://192.168.145.181:8080/customer");  // Ganti dengan URL endpoint API Anda
+    http.begin("http://192.168.xxx.xxx:8080/customer");  // Ganti dengan URL endpoint API Anda
     http.addHeader("Content-Type", "application/x-www-form-urlencoded");
 
     String postData = "names=" + String(distance); // names = diganti sesuai post data
