@@ -49,7 +49,7 @@ The code connects the ESP32 to a Wi-Fi network and measures the distance using a
   - Replace `ssid` and `password` with your Wi-Fi network name and password.
 
 - **Server URL:**
-  - Update the URL in `http.begin("http://192.168.145.181:8080/customer")` to match your server's IP address and endpoint.
+  - Update the URL in `http.begin("http://192.168.xxx.xxx:8080/customer")` to match your server's IP address and endpoint.
 
 - **POST Data:**
   - Modify `postData` to match the required format for your server's API. In the current code, `names=` is used as the key.
